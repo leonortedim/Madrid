@@ -1,21 +1,461 @@
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Madrid</title>
-		
-	</head>
-	<body>
-		<header>
-			<h1>Madrid</h1>
-		</header>
-		<main>
-			<p>Welcome to a simple HTML5 page for Madrid.</p>
-		</main>
-		<footer>
-			<small>&copy; Madrid</small>
-		</footer>
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Madrid</title>
+
+    <link rel="icon" type="image/x-icon" href="img/icon.jpg">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+
+  <body class="bg-[#eaf1f4] font-['Inter']">
+    <main class="min-h-screen p-3 md:p-6">
+      
+      <!-- Main white card -->
+
+        
+        <!-- Navbar -->
+        <header class="relative z-50 flex items-center justify-between px-2 mb-4 py-2 md:px-4">
+          
+          <!-- Logo -->
+          <a href="#" class="text-xl font-black  text-[#102333]">
+            MADRID
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden items-center gap-6 text-[12px] font-semibold text-[#102333]/70 md:flex">
+            <a href="#" class="transition hover:text-[#102333]">Sitios</a>
+            <a href="#" class="transition hover:text-[#102333]">Museus</a>
+            <a href="#" class="transition hover:text-[#102333]">Lojas</a>
+            <a href="#" class="transition hover:text-[#102333]">Comida</a>
+            <a href="#" class="transition hover:text-[#102333]">Maps</a>
+          </nav>
+
+         
+
+          <!-- Mobile menu button -->
+          <button class="text-2xl text-[#102333] md:hidden">
+            ☰
+          </button>
+        </header>
+
+        <!-- Hero banner -->
+        <section class="relative h-[78vh] overflow-hidden rounded-[24px] md:h-[82vh] mb-10">
+          
+          <!-- Banner image -->
+          <img 
+            src="img/banner.jpg" 
+            alt="Madrid banner"
+            class="absolute inset-0 h-full w-full object-cover "
+          >
+
+           <!-- Overlay second -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+          <!-- Soft dark overlay -->
+          <div class="absolute inset-0 bg-black/25"></div>
+
+          <!-- Hero content -->
+          <div class="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center">
+            
+            <h1 class="text-[18vw] font-black uppercase leading-[0.8] text-white md:text-[11vw]">
+              MADRID
+            </h1>
+
+            <p class=" mt-5 max-w-xl text-sm font-medium leading-6 text-white/90 md:text-base">
+              Ola amiguinhos, isto e apenas um guia de sitios que fui a Madrid e gostei muito, espero que vos seja util e n sejam pickpocketed <3.
+            </p>
+
+           
+          </div>
+        </section>
+      </section>
+
+     <!-- Top monuments section -->
+<section class="px-6 py-20 md:px-10">
+  <div class="mx-auto max-w-7xl p-0 md:p-0">
+    
+    <!-- Header -->
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <h2 class="text-2xl font-black tracking-[-0.04em] text-[#102333] md:text-3xl">
+          🌇 Top Monumentos
+        </h2>
+
+        <p class="mt-3 max-w-md text-sm leading-6 text-[#102333]/70">
+          Alguns dos monumentos mais iconicos que nao podem perder, por ordem de favoritismo.
+        </p>
+      </div>
+
+      <!-- Side arrows -->
+      <div class="hidden items-center gap-3 md:flex">
+        <button 
+          onclick="scrollMonuments(-1)"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333] transition hover:bg-[#102333] hover:text-white"
+        >
+          ‹
+        </button>
+
+        <button 
+          onclick="scrollMonuments(1)"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333] transition hover:bg-[#102333] hover:text-white"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div id="monumentsSlider" class="mt-8 flex gap-5 overflow-x-auto scroll-smooth pb-4">
+      
+
+         <!-- Card 5 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/chueca.jpg" 
+          alt="Chueca"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Chueca</h3>
+          <p class="mt-1 text-xs text-white/80">Bairro conhecido como o coracao da comunidade LGBTQ+, lojas incriveis, restaurantes deliciosos, e muitos bares.</p>
+        </div>
+      </article>
+
+
+      <!-- Card 1 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/retiro.jpg" 
+          alt="El Retiro"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Jardim do Retiro</h3>
+          <p class="mt-1 text-xs text-white/80">Parque enorme, sossegado e super bonito, com um lago que podem andar de barco e a estatua do rei.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/ciebeles.jpg" 
+          alt="Palacio Cibeles"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Palácio de Cibeles</h3>
+          <p class="mt-1 text-xs text-white/80">Palacio emblematico com um miradouro com vista lindissima para a cidade.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/granvia.jpg" 
+          alt="Gran Vía"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Gran Vía</h3>
+          <p class="mt-1 text-xs text-white/80">Rua principal da cidade, e um centro de comercio com lojas, restaurantes e cinemas.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/plazamayor.jpg" 
+          alt="Plaza Mayor"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Plaza Mayor</h3>
+          <p class="mt-1 text-xs text-white/80">Praca historica com arquitetura impressionante e vida noturna agitada. Ha mercadinhos dependendo da epoca do ano.</p>
+        </div>
+      </article>
+
+     
+
+      <!-- Card 6 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/saomiguek.jpg" 
+          alt="Mercado de Sao Miguel"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Mercado de Sao Miguel</h3>
+          <p class="mt-1 text-xs text-white/80">O bolhao de Madrid, e uma visita rapida para verem algns produtos locais e uma atmosfera unica.</p>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/puerta-de-alcala.jpg" 
+          alt="Puerta de Alcalá"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Puerta de Alcalá</h3>
+          <p class="mt-1 text-xs text-white/80">"Porta de entrada da cidade" mesmo em frente a entrada do Parque do Retiro.</p>
+        </div>
+      </article>
+      
+
+    </div>
+    <p class="text-sm leading-6 text-[#102333]/70">
+  Pequena dica: Ao comecar pela Gran Vía, se descerem sempre vao encontrar o palacio de Cibeles, se continuarem na mesma direção chegam à Puerta de Alcalá e ao Parque do Retiro. E a melhor maneira de verem grande parte dos monumentos principais num espaco curto de tempo.
+</p>
+
+    <!-- Mobile arrows -->
+    <div class="mt-4 flex justify-end gap-3 md:hidden">
+      <button 
+        onclick="scrollMonuments(-1)"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333]"
+      >
+        ‹
+      </button>
+
+      <button 
+        onclick="scrollMonuments(1)"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333]"
+      >
+        ›
+      </button>
+    </div>
+  </div>
+</section>
+     
+<!-- Top comida section -->
+<section class="px-6 pb-20 md:px-10">
+  <div class="mx-auto max-w-7xl p-0 md:p-0">
+    
+    <!-- Header -->
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <h2 class="text-2xl font-black tracking-[-0.04em] text-[#102333] md:text-3xl">
+        🥩 Top Comidas
+        </h2>
+
+        <p class="mt-3 max-w-md text-sm leading-6 text-[#102333]/70">
+          Os sitios que experimentei, gostei e foi mais do que me sentar e comer.
+        </p>
+      </div>
+
+      <!-- Side arrows -->
+      <div class="hidden items-center gap-3 md:flex">
+        <button 
+          onclick="scrollComidas(-1)"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333] transition hover:bg-[#102333] hover:text-white"
+        >
+          ‹
+        </button>
+
+        <button 
+          onclick="scrollComidas(1)"
+          class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333] transition hover:bg-[#102333] hover:text-white"
+        >
+          ›
+        </button>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div id="comidasSlider" class="mt-8 flex gap-5 overflow-x-auto scroll-smooth pb-4">
+      
+
+         <!-- Card 5 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/ramen.jpg" 
+          alt="Ramen"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">KONNICHIWA</h3>
+          <p class="mt-1 text-xs text-white/80">Foi o melhor ramen que ja comi na minha vida, parece mesmo que entras num bar japones.</p>
+        </div>
+      </article>
+
+
+      <!-- Card 1 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/retiro.jpg" 
+          alt="Kawaiicafe"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Kawaii Cafe</h3>
+          <p class="mt-1 text-xs text-white/80">Literalmente um maid cafe, muito fofinho e pookie, mesmo ao lado da Plaza Mayor.</p>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/tapas.jpg" 
+          alt="Tapas"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Tapas</h3>
+          <p class="mt-1 text-xs text-white/80">Nao me lembro de nomes, mas comi na chueca por nao ser tao caro como nas zonas centrais. Sempre maravilhoso, sem falha.</p>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/churros.jpg" 
+          alt="Churros"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Churros com Chocolate</h3>
+          <p class="mt-1 text-xs text-white/80">Literalmente qualquer sitio, sao sempre bons. De noite, se sairem depois de jantar, sabem ainda melhor.</p>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/fiveguys.jpg" 
+          alt="Five Guys"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Five Guys</h3>
+          <p class="mt-1 text-xs text-white/80">Diferente do nosso fast food, ao lado do vosso hotel, nada de outro mundo mas molhos e frutos secos de gratis. CUIDADO COM AS BATATAS!</p>
+        </div>
+      </article>
+
+     
+
+      <!-- Card 6 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/bolos.jpg" 
+          alt="Secretos de Lola Blancanieves"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Secretos de Lola Blancanieves</h3>
+          <p class="mt-1 text-xs text-white/80">Recomendacao da minha mae, achei pookie e diferente.</p>
+        </div>
+      </article>
+
+      <!-- Card 7 -->
+      <article class="group relative h-[280px] min-w-[230px] overflow-hidden rounded-2xl md:min-w-[260px]">
+        <img 
+          src="img/puerta-de-alcala.jpg" 
+          alt="Puerta de Alcalá"
+          class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-110"
+        >
+
+        <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"></div>
+
+        <div class="absolute bottom-0 left-0 p-5 text-white">
+          <h3 class="text-xl font-black tracking-[-0.04em]">Puerta de Alcalá</h3>
+          <p class="mt-1 text-xs text-white/80">"Porta de entrada da cidade" mesmo em frente a entrada do Parque do Retiro.</p>
+        </div>
+      </article>
+      
+
+    </div>
+
+    <!-- Mobile arrows -->
+    <div class="mt-4 flex justify-end gap-3 md:hidden">
+      <button 
+        onclick="scrollMonuments(-1)"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333]"
+      >
+        ‹
+      </button>
+
+      <button 
+        onclick="scrollMonuments(1)"
+        class="flex h-11 w-11 items-center justify-center rounded-full border border-[#102333]/20 text-xl text-[#102333]"
+      >
+        ›
+      </button>
+    </div>
+  </div>
+</section>
+
+        
+    </main>
+
+    <script>
+  function scrollMonuments(direction) {
+    const slider = document.getElementById("monumentsSlider");
+
+    slider.scrollBy({
+      left: direction * 300,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+
+<script>
+  function scrollComidas(direction) {
+    const slider = document.getElementById("comidasSlider");
+
+    slider.scrollBy({
+      left: direction * 300,
+      behavior: "smooth"
+    });
+  }
+</script>
+
+  </body>
 </html>
